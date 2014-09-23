@@ -1,0 +1,17 @@
+{
+    "name": "Content to Context menu",
+    "description": "http://stackoverflow.com/questions/14452777/is-that-possible-calling-content-script-method-by-context-menu-item-in-chrome-ex",
+    "version": "1",
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": [
+            "$.min.js",
+            "template.js",
+            "bg.js"
+        ]
+    }],
+    "permissions": [
+        "contextMenus"
+    ]
+}
