@@ -1,6 +1,6 @@
 {
-    "name": "Content to Context menu",
-    "description": "http://stackoverflow.com/questions/14452777/is-that-possible-calling-content-script-method-by-context-menu-item-in-chrome-ex",
+    "name": "Pivotal Print",
+    "description": "Chrome extension to print some good looking Pivotal tickets",
     "version": "1",
     "manifest_version": 2,
     "content_scripts": [{
