@@ -30,7 +30,6 @@ sudo gem install crxmake
 ```
 
 __Compile__
-Inside the extension folder
 ```
 crxmake --pack-extension=./ --extension-output=pivotal-print-chrome-extension.crx
 ```
