@@ -6,12 +6,11 @@
     <body>
         <script type="text/template" id="ticket_template">
             <div class="ticket ticket--<%=type.toLowerCase()%>">
-                <h3 class="ticket__title"><%=title%></h3>
-                <br>
+                <h1 class="ticket__title"><%=title%></h1>
+                <p class="ticket__labels meta"><%=labels.join(", ")%></p>
                 <p class="ticket__description"><%=description%></p>
-                <br><br>
-                <span class="ticket__labels meta pull-left"><%=labels.join(", ")%></span>
-                <span class="ticket__owner meta pull-right"><%=owner%></span>
+                <span class="ticket__owner meta pull-left">Owner: <%=owner%></span>
+                <span class="ticket__labels meta pull-right"><%=type%></span>
             </div>
         </script>
         <script src="scripts/template.js"></script>

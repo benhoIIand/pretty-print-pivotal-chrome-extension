@@ -7,13 +7,15 @@
 
 body {
     color: #333;
-    line-height: 20px;
+    line-height: 140%;
     font-size: 14px;
-    font-family: Helvetica;
+    font-family: Arial;
 }
 
-h3 {
-    line-height: 24px;
+h1 {
+    line-height: 120%;
+    font-size: 150%;
+    font-weight: 500;
 }
 .meta {
     color: #999;
@@ -28,9 +30,9 @@ h3 {
 }
 
 .ticket {
-    width: 500px;
-    padding: 15px;
-    border: 3px solid;
+    width: 480px;
+    padding: 15px 15px 15px 15px;
+    border: 6px solid;
     margin: 20px;
     overflow: hidden;
 }
@@ -41,13 +43,25 @@ h3 {
     border-color: green;
 }
 
+.ticket__labels {
+    font-size: 90%;
+}
+.ticket__description {
+    height: 160px;
+    margin: 10px 0;
+}
+
 @media print {
     body {
         line-height: 16px;
-        font-size: 10px;
+        font-size: 11px;
     }
     .ticket {
         width: 450px;
+        padding: 10px 10px 5px 10px;
+    }
+    .ticket__description {
+        height: 130px;
     }
     a {
         color: inherit;

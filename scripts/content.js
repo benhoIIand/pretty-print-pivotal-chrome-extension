@@ -11,17 +11,22 @@
         return data;
     };
 
+    var createLineBreaks = function(data) {
+        data.description = data.description.replace(/\n/, '<br>');
+        return data;
+    };
+
     var renderPivotalTicket = function(data) {
         var el = document.createElement('div');
-        el.innerHTML = tmpl(template, extractLinks(data));
+        el.innerHTML = tmpl(template, extractLinks(createLineBreaks(data)));
         document.body.appendChild(el);
     };
 
     document.addEventListener('DOMContentLoaded', function() {
         template = document.querySelector('#ticket_template').innerHTML;
-        
+
         chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
-            if(msg.name === 'renderPivotalTicket') {
+            if (msg.name === 'renderPivotalTicket') {
                 setTimeout(function() {
                     renderPivotalTicket(msg.value);
                 }, 0);
